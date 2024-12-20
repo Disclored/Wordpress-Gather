@@ -23,5 +23,5 @@ add_filter( 'rest_authentication_errors', function( $result ) {
 
 
 
-6 - Now if you check the URLS from the Users Enumerations you must get the following response:
+6 - Now if you check the URLS from the *Users Enumerations* file you must get the following response:
 {"code":"rest_user_invalid_id","message":"Invalid user ID.","data":{"status":404}}
