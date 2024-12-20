@@ -1,0 +1,27 @@
+//If you have a Wordpress site and you want to protect it against this type of enumeration follow this steps:
+
+1 - Login into your Wordpress site
+2 - Go to Appearence Menu
+3 - Go to Theme File Editor
+4 - In Theme Files go to functions.php
+5 - Add this code:
+
+
+add_filter( 'rest_authentication_errors', function( $result ) {
+    if ( true === $result || is_wp_error( $result ) ) {
+        return $result;
+    }
+    if ( ! is_user_logged_in() ) {
+        return new WP_Error(
+            'rest_not_logged_in',
+            __( 'You are not currently logged in.' ),
+            array( 'status' => 401 )
+        );
+    }
+    return $result;
+});
+
+
+
+6 - Now if you check the URLS from the Users Enumerations you must get the following response:
+{"code":"rest_user_invalid_id","message":"Invalid user ID.","data":{"status":404}}
