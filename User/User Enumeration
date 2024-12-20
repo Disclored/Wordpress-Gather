@@ -1,5 +1,10 @@
 curl https://www.site.com/wp-json/oembed/1.0/embed?url=POST-URL
 
+
+https://www.site.com/wp-json/
+https://www.site.com/wp-json/wp/
+https://www.site.com/wp-json/wp/v2/
+https://www.site.com/wp-json/wp/v2/users/
 https://www.site.com/wp-json/wp/v2/users/({number}
 Example: https://www.site.com/wp-json/wp/v2/users/1
 
