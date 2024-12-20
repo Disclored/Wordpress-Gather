@@ -1,0 +1,8 @@
+curl https://www.site.com/wp-json/oembed/1.0/embed?url=POST-URL
+
+https://www.site.com/wp-json/wp/v2/users/({number}
+Example: https://www.site.com/wp-json/wp/v2/users/1
+
+https://www.site.com/wp-sitemap.xml
+
+https://www.site.com/?author=1
